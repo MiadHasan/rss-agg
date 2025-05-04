@@ -51,5 +51,5 @@ func (apiConfig *apiConfig) handleGetPostsByUser(w http.ResponseWriter, r *http.
 		return
 	}
 
-	respondWithJSON(w, 200, posts)
+	respondWithJSON(w, 200, dbPostsToPosts(posts))
 }
